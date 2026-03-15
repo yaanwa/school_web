@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1,a {
+    color: #fff;
+}
+header {
+    user-select: none;
+    padding: 10px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2cccc;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+div > a {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 10px;
+    transition: .4s;
+
+}
+div > a:hover { 
+    background-color: #e09696;
+    transition: .5s;
+}
