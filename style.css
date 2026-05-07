@@ -62,7 +62,7 @@ nav a.active { color: var(--accent); }
 }
 .hero-left {
     display: flex; flex-direction: column; justify-content: center;
-    padding: 80px 60px; position: relative; z-index: 2;
+    padding: 80px 60px 80px 50px; position: relative; z-index: 2;
 }
 .hero-tag {
     font-family: 'Space Mono', monospace; font-size: 23px; letter-spacing: 0.2em;
