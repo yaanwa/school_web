@@ -62,7 +62,7 @@ nav a.active { color: var(--accent); }
 }
 .hero-left {
     display: flex; flex-direction: column; justify-content: center;
-    padding: 80px 60px 80px 50px; position: relative; z-index: 2;
+    padding: 80px 60px 80px 50px; position: relative; z-index: 2; left: 170px;
 }
 .hero-tag {
     font-family: 'Space Mono', monospace; font-size: 23px; letter-spacing: 0.2em;
@@ -124,7 +124,7 @@ nav a.active { color: var(--accent); }
 .orb-glyph { font-family:'Noto Serif TC',serif; font-size:69px; color:rgba(200,184,122,0.65); font-weight:700; }
 .orb-glow { position:absolute; inset:0; border-radius:50%; background:radial-gradient(ellipse at 50% 50%, rgba(92,107,192,0.12), transparent 70%); }
 .corner-meta { position:absolute; bottom:52px; right:40px; font-family:'Space Mono',monospace; font-size:17px; color:var(--muted); letter-spacing:0.12em; line-height:2.2; opacity:0.45; text-align:right; }
-.scroll-line { position:absolute; bottom:40px; left:60px; display:flex; align-items:center; gap:12px; z-index:2; }
+.scroll-line { position:absolute; bottom:40px; left:60px; display:flex; align-items:center; gap:12px; z-index:2; left: 200px;}
 .scroll-line span { font-family:'Space Mono',monospace; font-size:17px; letter-spacing:0.15em; color:var(--muted); text-transform:uppercase; }
 .scroll-line::before { content:''; display:block; width:1px; height:50px; background:linear-gradient(to bottom, transparent, var(--muted)); animation:scrollpulse 2s ease-in-out infinite; }
 
