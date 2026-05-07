@@ -1,216 +1,353 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-        </script>
-    <title>畢業成果展</title>
-</head>
-<body>
-    <header>
-        <h1>畢業成果展</h1>
-        <nav class="list">
-
-            <div class="a1">
-                <a href="#">簡介</a>
-            </div>
-            <div class="a2">
-                <a href="#main2">什麼是人工智慧</a>
-            </div>
-            <div class="a3">
-                <a href="#">AI小工具</a>
-            </div>
-            <div class="a4">
-                <a href="#">我的GitHub</a>
-            </div>
-        </nav>
-    </header>
-    <hr>
- -->
-
-<!-- 首頁 -->
-<!-- <div id="main1">
-        <nav class="text">
-            <h1>數位工具新視界</h1>
-            <p>這個網站專門整理各種實用的AI小工具，讓使用者可以快速找到適合自己的工具，節省搜尋時間，輕鬆體驗AI帶來的便利。</p>
-        </nav>
-        <img src="img/1.gif" alt="">
-        <a href="#main2" class="but1">什麼是人工智慧</a>
-        <a href="#" class="but2">AI小工具</a>
-    </div> -->
-
-<!-- 什麼是人工智慧 -->
-<!-- <div id="main2">
-        <h2>一、 什麼是人工智慧？—— 模擬人類智慧的數位大腦</h2>
-        <hr>
-        <p>人工智慧（Artificial Intelligence，簡稱 AI）是一門致力於讓電腦模擬人類認知功能的科學技術。簡單來說，它並非僅是執行預設指令的程式，而是透過機器學習（Machine Learning）與深度學習（Deep
-        Learning），使系統具備從大量數據中「學習」模式、進行「邏輯推理」以及「自我修正」的能力。當前的 AI 已能執行多項複雜任務，包括理解自然語言、辨識圖像與聲音，甚至在棋類比賽或專業診斷中展現出超越人類的精準度。</p>
-        <h2>二、 人工智慧的現狀—— 從自動化到生成式革命</h2>
-        <p>目前的 AI 發展已從「辨識型」邁向「生成式（Generative AI）」的新紀元。過去的 AI 擅長在既有資料中分類或預測（如垃圾郵件過濾、人臉辨識），而現在以 LLM（大型語言模型）
-        為代表的技術，則賦予了機器創造新內容的能力，例如撰寫文案、編寫程式碼或繪製藝術圖像。AI 已深入各行各業，在醫療領域協助新藥研發，在金融業偵測詐騙行為，在日常生活中則化身為智慧助理，成為提升人類生產力的關鍵夥伴。</p>
-        <h2>三、 未來的發展趨勢—— 邁向「通用 AI」與「代理式系統」</h2>
-        <p>展望未來，人工智慧正朝著通用人工智慧（AGI）與代理式 AI（AI Agents）兩大方向演進。
-        
-        從工具轉向代理：未來的 AI 不再只是被動回答問題的工具，而是能自主規劃路徑、跨軟體執行任務的「數位員工」，具備更高程度的決策自主性。
-        
-        多模態與具身智能：AI 將具備更強的「多模態」能力，能同時理解文字、影音與觸覺，並與機器人硬體結合（具身智能），在現實物理世界中與人類協作。
-        
-        負責任的 AI：隨著影響力擴大，如何建立具備倫理透明度、安全性且能解釋決策邏輯的 AI 系統，將成為科技與社會發展的核心課題。</p>
-    </div>
-
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="zh-TW">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>畢業成果展</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
-        <div class="logo">畢業成果展 &nbsp;/&nbsp; 2025</div>
+        <div class="logo" onclick="showView('home')">畢業成果展 &nbsp;/&nbsp; 2026</div>
         <nav>
-            <a href="#hero">簡介</a>
-            <a href="#main2">什麼是人工智慧</a>
-            <a href="#">AI小工具</a>
-            <a href="#">我的 GitHub</a>
+            <a onclick="showView('home'); scrollToHero();" data-view="home">簡介</a>
+            <a onclick="showView('home'); scrollToAI();" data-view="home-ai">什麼是人工智慧</a>
+            <a onclick="showView('tools')" data-view="tools">AI小工具</a>
+            <a href="https://github.com/yaanwa" target="_blank">我的 GitHub</a>
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="hero-left">
-            <div class="hero-tag">畢業成果展 · Digital Tools</div>
-            <h1 class="hero-title">數位工具<br><em>新視界</em></h1>
-            <p class="hero-sub">這個網站專門整理各種實用的 AI 小工具，讓使用者可以快速找到適合自己的工具，節省搜尋時間，輕鬆體驗 AI 帶來的便利。</p>
-            <div class="hero-btns">
-                <a href="#main2" class="btn-primary">什麼是人工智慧 →</a>
-                <a href="#" class="btn-ghost">AI 小工具</a>
-            </div>
-        </div>
-
-        <div class="hero-right">
-            <div class="grid-bg"></div>
-            <div class="orb-ring">
-                <div class="orb-glow"></div>
-                <div class="orb-inner">
-                    <span class="orb-glyph">理</span>
+    <!-- ══════════════════════════════
+         VIEW: HOME (Hero + AI 介紹)
+    ══════════════════════════════ -->
+    <div id="view-home" class="view active">
+        <!-- Hero -->
+        <section id="hero">
+            <div class="hero-left">
+                <div class="hero-tag">畢業成果展 · Digital Tools</div>
+                <h1 class="hero-title">數位工具<br><em>新視界</em></h1>
+                <p class="hero-sub">這個網站專門整理各種實用的 AI 小工具，讓使用者可以快速找到適合自己的工具，節省搜尋時間，輕鬆體驗 AI 帶來的便利。</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="scrollToAI()">什麼是人工智慧 →</button>
+                    <button class="btn-ghost" onclick="showView('tools')">AI 小工具</button>
                 </div>
             </div>
-            <div class="corner-meta">
-                ARTIFICIAL INTELLIGENCE<br>
-                GRADUATION PROJECT<br>
-                2025 · TAICHUNG
-            </div>
-        </div>
-
-        <div class="scroll-line">
-            <span>Scroll</span>
-        </div>
-    </section>
-
-    <div class="section-divider"><span>SECTION 01 — 人工智慧</span></div>
-
-    <section id="main2">
-        <div class="section-header">
-            <div class="section-index">§ 01</div>
-            <div class="section-title-block">
-                <h2>什麼是人工智慧？</h2>
-                <p>模擬人類智慧的數位大腦——從辨識到生成，AI 正在重塑每個產業的運作方式。</p>
-            </div>
-        </div>
-
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-num">01</div>
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="3" />
-                        <path
-                            d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-                    </svg>
+            <div class="hero-right">
+                <div class="grid-bg"></div>
+                <div class="orb-ring">
+                    <div class="orb-glow"></div>
+                    <div class="orb-inner"><span class="orb-glyph">理</span></div>
                 </div>
-                <h3>什麼是人工智慧？</h3>
-                <p>人工智慧（AI）是讓電腦模擬人類認知功能的科技。它透過機器學習（Machine Learning）與深度學習（Deep
-                    Learning），使系統具備從大量數據中「學習」模式、進行「邏輯推理」以及「自我修正」的能力。</p>
-                <div class="card-accent"></div>
+                <div class="corner-meta">ARTIFICIAL INTELLIGENCE<br>GRADUATION PROJECT<br>2025 · TAICHUNG</div>
             </div>
+            <div class="scroll-line"><span>Scroll</span></div>
+        </section>
 
-            <div class="card">
-                <div class="card-num">02</div>
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24">
-                        <rect x="2" y="3" width="20" height="14" rx="2" />
-                        <path d="M8 21h8M12 17v4" />
-                    </svg>
-                </div>
-                <h3>人工智慧的現狀</h3>
-                <p>AI 已從「辨識型」邁向「生成式（Generative AI）」的新紀元。以 LLM（大型語言模型）為代表的技術，賦予機器創造新內容的能力，在醫療、金融與日常生活中成為提升人類生產力的關鍵夥伴。</p>
-                <div class="card-accent"></div>
-            </div>
-
-            <div class="card">
-                <div class="card-num">03</div>
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                    </svg>
-                </div>
-                <h3>AI 能做什麼？</h3>
-                <p>當前 AI 能執行多項複雜任務，包括理解自然語言、辨識圖像與聲音，甚至在棋類比賽或專業診斷中展現出超越人類的精準度。從撰寫文案、編寫程式碼到繪製藝術圖像，皆是其能力展現。</p>
-                <div class="card-accent"></div>
-            </div>
-        </div>
-
-        <div class="future-block">
-            <div class="future-header">
-                <h2>未來的發展趨勢</h2>
-                <div class="future-header-line"></div>
-                <div class="section-index">§ AGI &amp; Agents</div>
-            </div>
-
-            <div class="timeline">
-                <div class="tl-item">
-                    <div class="tl-dot"></div>
-                    <div class="tl-label">Trend 01 · Agency</div>
-                    <div class="tl-title">從工具轉向代理</div>
-                    <p class="tl-text">未來的 AI 不再只是被動回答問題的工具，而是能自主規劃路徑、跨軟體執行任務的「數位員工」，具備更高程度的決策自主性。</p>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-dot"></div>
-                    <div class="tl-label">Trend 02 · Multimodal</div>
-                    <div class="tl-title">多模態與具身智能</div>
-                    <p class="tl-text">AI 將具備更強的「多模態」能力，能同時理解文字、影音與觸覺，並與機器人硬體結合（具身智能），在現實物理世界中與人類協作。</p>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-dot"></div>
-                    <div class="tl-label">Trend 03 · Ethics</div>
-                    <div class="tl-title">負責任的 AI</div>
-                    <p class="tl-text">如何建立具備倫理透明度、安全性且能解釋決策邏輯的 AI 系統，將成為科技與社會發展的核心課題。</p>
+        <!-- AI 介紹 -->
+        <div class="section-divider" id="main2-anchor"><span>SECTION 01 — 人工智慧</span></div>
+        <section id="main2">
+            <div class="section-header">
+                <div class="section-index">§ 01</div>
+                <div class="section-title-block">
+                    <h2>什麼是人工智慧？</h2>
+                    <p>模擬人類智慧的數位大腦——從辨識到生成，AI 正在重塑每個產業的運作方式。</p>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-num">01</div>
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+                    <h3>什麼是人工智慧？</h3>
+                    <p>人工智慧（AI）是讓電腦模擬人類認知功能的科技。它透過機器學習（Machine Learning）與深度學習（Deep Learning），使系統具備從大量數據中「學習」模式、進行「邏輯推理」以及「自我修正」的能力。</p>
+                    <div class="card-accent"></div>
+                </div>
+                <div class="card">
+                    <div class="card-num">02</div>
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                    <h3>人工智慧的現狀</h3>
+                    <p>AI 已從「辨識型」邁向「生成式（Generative AI）」的新紀元。以 LLM（大型語言模型）為代表的技術，賦予機器創造新內容的能力，在醫療、金融與日常生活中成為提升人類生產力的關鍵夥伴。</p>
+                    <div class="card-accent"></div>
+                </div>
+                <div class="card">
+                    <div class="card-num">03</div>
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                    <h3>AI 能做什麼？</h3>
+                    <p>當前 AI 能執行多項複雜任務，包括理解自然語言、辨識圖像與聲音，甚至在棋類比賽或專業診斷中展現出超越人類的精準度。從撰寫文案、編寫程式碼到繪製藝術圖像，皆是其能力展現。</p>
+                    <div class="card-accent"></div>
+                </div>
+            </div>
+            <div class="future-block">
+                <div class="future-header">
+                    <h2>未來的發展趨勢</h2>
+                    <div class="future-header-line" style="flex:1;height:1px;background:var(--line);"></div>
+                    <div class="section-index">§ AGI &amp; Agents</div>
+                </div>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">Trend 01 · Agency</div>
+                        <div class="tl-title">從工具轉向代理</div>
+                        <p class="tl-text">未來的 AI 不再只是被動回答問題的工具，而是能自主規劃路徑、跨軟體執行任務的「數位員工」，具備更高程度的決策自主性。</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">Trend 02 · Multimodal</div>
+                        <div class="tl-title">多模態與具身智能</div>
+                        <p class="tl-text">AI 將具備更強的「多模態」能力，能同時理解文字、影音與觸覺，並與機器人硬體結合（具身智能），在現實物理世界中與人類協作。</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">Trend 03 · Ethics</div>
+                        <div class="tl-title">負責任的 AI</div>
+                        <p class="tl-text">如何建立具備倫理透明度、安全性且能解釋決策邏輯的 AI 系統，將成為科技與社會發展的核心課題。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>© 2025 畢業成果展 · 數位工具新視界</p>
-        <p>GRADUATION PROJECT · TAICHUNG · TW</p>
-    </footer>
+        <footer>
+            <p>© 2025 畢業成果展 · 數位工具新視界</p>
+            <p>GRADUATION PROJECT · TAICHUNG · TW</p>
+        </footer>
+    </div>
 
+    <!-- ══════════════════════════════
+         VIEW: TOOLS GRID
+    ══════════════════════════════ -->
+    <div id="view-tools" class="view">
+        <section style="padding: 120px 60px 80px;">
+            <div class="tools-page-header anim">
+                <div class="page-tag">Section 02 · AI Tools</div>
+                <h2>AI 小工具</h2>
+                <p>精選 7 款實用 AI 工具，涵蓋學習、閱讀、筆記、求職與資訊搜尋，點擊任一卡片查看詳細介紹。</p>
+            </div>
+            <div class="tools-grid anim">
+                <div class="tool-card" onclick="showDetail('thetawave')">
+                    <div class="tool-card-index">01 / 07</div>
+                    <div class="tool-card-emoji">🎓</div>
+                    <h3>Thetawave</h3>
+                    <div class="tool-card-tag">學術筆記</div>
+                    <p>專為大學生打造的智慧筆記工具，語音錄入、自動整理，內建 Flashcard 與 Quiz 功能。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+                <div class="tool-card" onclick="showDetail('libriai')">
+                    <div class="tool-card-index">02 / 07</div>
+                    <div class="tool-card-emoji">📚</div>
+                    <h3>LibriAI</h3>
+                    <div class="tool-card-tag">電子書整理</div>
+                    <p>上傳 PDF、電子書或影片連結，AI 精準提取核心，生成結構化大綱與重點摘要。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+                <div class="tool-card" onclick="showDetail('kuse')">
+                    <div class="tool-card-index">03 / 07</div>
+                    <div class="tool-card-emoji">📓</div>
+                    <h3>Kuse</h3>
+                    <div class="tool-card-tag">視覺化筆記</div>
+                    <p>擁有 AI 加持的無限畫布，自由整合圖片、PDF、影片，智能梳理跨領域邏輯。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+                <div class="tool-card" onclick="showDetail('slayjobs')">
+                    <div class="tool-card-index">04 / 07</div>
+                    <div class="tool-card-emoji">💼</div>
+                    <h3>Slayjobs</h3>
+                    <div class="tool-card-tag">面試準備</div>
+                    <p>分析職缺描述，預測面試問題，提供客製化回答策略與履歷優化建議。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+                <div class="tool-card" onclick="showDetail('gemini')">
+                    <div class="tool-card-index">05 / 07</div>
+                    <div class="tool-card-emoji">♊</div>
+                    <h3>Gemini</h3>
+                    <div class="tool-card-tag">查資料 / 寫文</div>
+                    <p>Google 旗艦 AI，深度整合 Google 生態，適合即時資訊查證與各類文字創作。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+                <div class="tool-card" onclick="showDetail('perplexity')">
+                    <div class="tool-card-index">06 / 07</div>
+                    <div class="tool-card-emoji">🔍</div>
+                    <h3>Perplexity</h3>
+                    <div class="tool-card-tag">AI 搜尋</div>
+                    <p>引用透明化的次世代搜尋引擎，即時搜全網並附精確來源，直接給出綜合報告。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+                <div class="tool-card tool-card-wide" onclick="showDetail('claude')">
+                    <div>
+                        <div class="tool-card-index">07 / 07</div>
+                        <div class="tool-card-emoji">👨‍💻</div>
+                        <h3>Claude</h3>
+                        <div class="tool-card-tag">程式設計</div>
+                    </div>
+                    <p class="tool-card-wide-text">以優雅文筆與強大邏輯推理著稱，尤其在程式設計領域表現卓越。能一次處理數萬字的程式碼庫，給出深度分析與 Debug 建議，是軟體工程師與文字創作者的高階首選。</p>
+                    <span class="tool-card-arrow">↗</span>
+                    <div class="tool-card-bar"></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>© 2025 畢業成果展 · 數位工具新視界</p>
+            <p>GRADUATION PROJECT · TAICHUNG · TW</p>
+        </footer>
+    </div>
+
+    <!-- ══════════════════════════════
+         VIEW: TOOL DETAIL
+    ══════════════════════════════ -->
+    <div id="view-detail" class="view">
+        <section style="padding: 120px 60px 80px;">
+            <div class="detail-back" onclick="showView('tools')">返回 AI 小工具</div>
+            <div class="detail-layout" id="detail-content"></div>
+        </section>
+        <footer>
+            <p>© 2025 畢業成果展 · 數位工具新視界</p>
+            <p>GRADUATION PROJECT · TAICHUNG · TW</p>
+        </footer>
+    </div>
+
+    <script>
+        const tools = {
+            thetawave: {
+                emoji: '🎓', name: 'Thetawave', subtitle: '大學生的學業神隊友',
+                meta: 'Academic Notes · AI Study Tool', url: 'https://thetawave.ai/zh-tw',
+                features: ['語音錄入自動轉化筆記','心智圖與重點大綱生成','Flashcard 抽認卡系統','Quiz 互動測驗功能','課本掃描智能整理'],
+                body: ['Thetawave 是一款專為學術場景打造的智慧筆記工具，特別受到海外留學生與頂尖名校大學生的青睞。它的核心強項在於「即時轉化」與「深度輸入」，使用者可以直接在課堂中透過語音錄入或掃描課本，AI 便會自動將雜亂的資訊整理成精簡且具邏輯性的筆記。','功能上，它不僅能生成心智圖與重點大綱，還內建了「Flashcard（抽認卡）」與「Quiz（小測驗）」功能，幫助學生將靜態筆記轉變為互動式的複習材料。這種「輸入即輸出」的學習閉環設計，大幅縮短了傳統筆記到複習之間的距離。','對於面臨考前衝刺或需要處理海量學科內容的大學生來說，Thetawave 就像是一個可以裝進口袋的「第二大腦」，將原本枯燥的抄寫轉化為高效的知識吸收。特別是在需要快速掌握陌生科目或同時應付多門課程壓力時，它的智能整理能力能讓你在最短時間內建立清晰的知識架構。']
+            },
+            libriai: {
+                emoji: '📚', name: 'LibriAI', subtitle: '電子書與長文本的導讀大師',
+                meta: 'Reading · Document Summarizer', url: 'https://www.thelibri.ai/',
+                features: ['PDF / Word 文件上傳解析','跨語言閱讀與翻譯','結構化大綱自動生成','核心精髓濃縮摘要','圖片與影片連結分析'],
+                body: ['LibriAI 致力於解決現代人「資訊焦慮」的問題，特別是針對厚重的電子書與長篇學術文件。它的強項在於強大的多媒體內容總結能力，無論是上傳 PDF、Word 電子書，甚至是圖片與影片連結，它都能精準提取核心精髓，並將其濃縮為高品質的知識摘要。','這款工具的功能亮點在於「跨語言閱讀」與「結構化產出」。它可以幫助讀者在極短的時間內掌握一本書的骨幹，並能自動生成結構化的大綱與筆記，讓你不再被語言障礙或文件長度所困。','其主要受眾為研究人員、職場人士以及熱愛終身學習的讀者。無論是需要快速消化學術文獻的研究生，還是面對一疊報告不知從何讀起的上班族，LibriAI 都能讓你以最少的時間成本，獲取最大的知識價值。']
+            },
+            kuse: {
+                emoji: '📓', name: 'Kuse', subtitle: '視覺化與全能筆記的畫布',
+                meta: 'Visual Notes · Infinite Canvas', url: 'https://www.kuse.ai/zh-tw',
+                features: ['無限畫布自由拖曳排版','多格式整合（圖片、PDF、影片）','智能解題與自動寫作助手','跨領域邏輯梳理','社交媒體貼文一鍵生成'],
+                body: ['Kuse 不僅是一個筆記工具，更像是一張擁有 AI 加持的「無限畫布」。它的強項在於「視覺化整理」與「多格式整合」，使用者可以在一個空間內自由拖曳圖片、PDF、YouTube 影片與網頁連結，AI 會即時分析這些異質資料，協助使用者進行跨領域的邏輯梳理。','除了基本的摘要功能，Kuse 還具備「智能解題」與「自動寫作助手」，能根據現有的筆記草稿一鍵生成完整的標題、段落甚至社交媒體貼文。這種從「整理思維」到「輸出內容」的一條龍流程，讓創作者和研究者的工作效率倍增。','其受眾群非常廣泛，包含需要進行專案規劃的 UI/UX 設計師、整理研究報告的學者，以及追求極致組織效率的數位遊牧民族。如果你曾為「靈感散落在各處」而苦惱，Kuse 就是那個幫你把一切匯聚在同一個空間的神器。']
+            },
+            slayjobs: {
+                emoji: '💼', name: 'Slayjobs', subtitle: '職場求職的面試過關利器',
+                meta: 'Career · Interview Training', url: 'https://slayjobs.com/',
+                features: ['職缺描述（JD）智能分析','面試問題預測與模擬','客製化回答策略建議','履歷優化與排版建議','語調與表達邏輯反饋'],
+                body: ['Slayjobs 是一款專注於「求職實戰」的垂直領域 AI，專為面臨求職挑戰的職場新人或轉職者設計。它的強項在於精準的「面試模擬」與「履歷優化」。透過分析職缺描述（JD），它能預測面試官可能提出的問題，並根據使用者的背景提供客製化的回答策略建議。','在功能層面，Slayjobs 提供了模擬面試反饋，幫助求職者調整語調、表達邏輯甚至內容的專業度。這就像擁有一位私人職涯教練，在真正上場前幫你把所有細節打磨到位。','對於正在尋找理想工作、對面試感到緊張，或是需要針對特定職位調整履歷的應徵者來說，Slayjobs 提供了一個私密且高效的練習場域。它讓你在不承受真實壓力的環境下反覆磨練，顯著提升錄取成功率。']
+            },
+            gemini: {
+                emoji: '♊', name: 'Gemini', subtitle: '資訊檢索與內容創作的平衡者',
+                meta: 'Google AI · General Purpose', url: 'https://gemini.google.com/app?hl=zh-TW',
+                features: ['深度資訊檢索與即時搜尋','Google 生態無縫整合','文字創作與翻譯','複雜資料查證','親切且高常識的對話體驗'],
+                body: ['Gemini 是 Google 推出的旗艦級 AI 助手，其強項在於深厚的「資訊檢索能力」與「跨工具生態整合」。作為一個通用的 AI 助手，它能與 Google 文件、地圖、郵件等功能無縫對接，適合處理需要即時網路資訊支援的寫作與分析任務。','它的功能涵蓋了文字創作、資料查證以及複雜的翻譯任務，語氣通常親切且具備高度的常識。搭配 Google 強大的搜索基礎設施，Gemini 在需要整合多方資訊並做出快速判斷的場景中表現尤為突出。','Gemini 的受眾群最為大眾化，從需要寫信、撰寫文案的辦公族，到需要快速查證旅遊資訊的普羅大眾，都能透過 Gemini 獲得穩定且高品質的協助。如果你已深度使用 Google 的各項服務，Gemini 將是最無縫的 AI 擴充選項。']
+            },
+            perplexity: {
+                emoji: '🔍', name: 'Perplexity', subtitle: '下一代的 AI 搜尋引擎',
+                meta: 'AI Search · Source-Cited', url: 'https://www.perplexity.ai/',
+                features: ['即時全網搜索整合','精確來源標籤引用','邏輯嚴密的綜合報告','學術論文查詢支援','高事實準確性保障'],
+                body: ['Perplexity 徹底顛覆了傳統搜尋引擎的邏輯，其強項在於「引用透明化」與「答案直接化」。與其說它是聊天機器人，它更像是一個會說話的學術圖書館。每當使用者提出問題，它會即時搜索全網，並附上精確的來源標籤，確保每一條資訊都有據可查。','對於需要寫論文、做市場調研或需要高度事實準確性的使用者來說，Perplexity 的功能價值極高。它能幫助使用者跳過翻閱無數搜尋結果分頁的過程，直接給出邏輯嚴密的綜合性報告。','在資訊爆炸的時代，「知道資訊從哪裡來」比「得到一個答案」更為重要。Perplexity 正是抓住了這個痛點——它的受眾主要是專業人士、分析師與學生，是所有追求「正確且可驗證的資訊」的人的首選工具。']
+            },
+            claude: {
+                emoji: '👨‍💻', name: 'Claude', subtitle: '程式設計與長邏輯處理的工匠',
+                meta: 'Coding · Long-Context AI', url: 'https://claude.ai/',
+                features: ['超長上下文處理能力','程式碼 Debug 與深度分析','低幻覺率、高邏輯嚴謹度','優雅人性化的回應風格','複雜文本編輯與法務輔助'],
+                body: ['Claude 在 AI 圈以其「優雅的文筆」與「強大的邏輯推理能力」著稱，尤其在「程式設計（Coding）」領域表現卓越。它的強項在於處理超長上下文的能力，能一次閱讀數萬字的程式碼庫或長篇小說，並在不遺漏細節的情況下給出深度分析或 Debug 建議。','在功能上，Claude 的回應通常更具人性化且邏輯嚴謹，相較於其他 AI，它在減少「幻覺（Hallucination）」問題上做得更為出色。無論是逐行解析複雜的演算法，還是幫助工程師重構一段混亂的程式碼，Claude 都能以清晰有條理的方式呈現解決方案。','其受眾群高度集中在軟體工程師、文字創作者與法務人員。對於需要處理複雜代碼邏輯或進行深度文本編輯的用戶而言，Claude 是目前市面上最穩定且具專業深度的高階 AI 選擇。而這個網站本身，也正是透過 Claude 的協助打造出來的。']
+            }
+        };
+
+        function showView(name) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById('view-' + name).classList.add('active');
+            window.scrollTo(0, 0);
+            // re-trigger .anim elements
+            document.getElementById('view-' + name).querySelectorAll('.anim').forEach((el, i) => {
+                el.style.animation = 'none';
+                el.offsetHeight;
+                el.style.opacity = '0';
+                el.style.animation = `fadein 0.7s ease ${0.05 + i * 0.12}s forwards`;
+            });
+            // update nav highlight
+            updateNav(name);
+        }
+
+        function updateNav(view) {
+            document.querySelectorAll('nav a[data-view]').forEach(a => {
+                a.classList.remove('active');
+                if (a.dataset.view === view || a.dataset.view === 'home-ai' && view === 'home') {
+                    // handled by scroll listener for home
+                }
+                if (a.dataset.view === view) a.classList.add('active');
+            });
+            if (view === 'home') {
+                document.querySelector('nav a[data-view="home"]').classList.add('active');
+            }
+        }
+
+        function scrollToHero() {
+            if (!document.getElementById('view-home').classList.contains('active')) showView('home');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToAI() {
+            if (!document.getElementById('view-home').classList.contains('active')) {
+                showView('home');
+                setTimeout(() => {
+                    document.getElementById('main2-anchor').scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            } else {
+                document.getElementById('main2-anchor').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function showDetail(id) {
+            const t = tools[id];
+            document.getElementById('detail-content').innerHTML = `
+                <div class="detail-main">
+                    <div class="detail-emoji">${t.emoji}</div>
+                    <div class="detail-meta">${t.meta}</div>
+                    <div class="detail-title">${t.name}</div>
+                    <div class="detail-subtitle">${t.subtitle}</div>
+                    <div class="detail-divider"></div>
+                    <div class="detail-body">${t.body.map(p => `<p>${p}</p>`).join('')}</div>
+                </div>
+                <div class="detail-sidebar">
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <p>Tool Overview</p>
+                            <h4>${t.name}</h4>
+                        </div>
+                        <div class="detail-features">
+                            ${t.features.map(f => `<div class="detail-feature">${f}</div>`).join('')}
+                        </div>
+                        <div class="detail-cta">
+                            <a href="${t.url}" target="_blank">前往官方網站 ↗</a>
+                        </div>
+                    </div>
+                </div>`;
+            showView('detail');
+        }
+
+        // Scroll-aware nav highlight on home view
+        const main2anchor = document.getElementById('main2-anchor');
+        window.addEventListener('scroll', () => {
+            if (!document.getElementById('view-home').classList.contains('active')) return;
+            const scrolled = window.scrollY;
+            const threshold = main2anchor.getBoundingClientRect().top + scrolled - 100;
+            if (scrolled >= threshold) {
+                document.querySelector('nav a[data-view="home"]').classList.remove('active');
+                document.querySelector('nav a[data-view="home-ai"]').classList.add('active');
+            } else {
+                document.querySelector('nav a[data-view="home-ai"]').classList.remove('active');
+                document.querySelector('nav a[data-view="home"]').classList.add('active');
+            }
+        });
+
+        // Init
+        document.querySelector('nav a[data-view="home"]').classList.add('active');
+    </script>
 </body>
-
 </html>
